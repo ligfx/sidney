@@ -1,5 +1,15 @@
 # Sidney, the automated Student Directory Dorm Network Inventory (SDDNI) Cross-Referencer!
 
+## Installing
+
+1) Open Terminal.app
+2) Make sure you have Python installed: "python -V"
+3) Make sure you have virtualenv installed: "easy_install virtualenv"
+4) `cd` to this directory
+5) Type "./sddni" and press enter
+
+## Using
+
 Example:
 
     Reading Student Directory...
