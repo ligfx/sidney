@@ -1,0 +1,6 @@
+Open Terminal.app
+Make sure you have Python installed: "python -V"
+Make sure you have virtualenv installed: "easy_install virtualenv"
+`cd` to this directory
+Type "./sddni" and press enter
+

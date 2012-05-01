@@ -1,0 +1,10 @@
+#!/bin/bash
+
+home=$(dirname $0)
+echo $home
+
+test -f "$home/.Python" || virtualenv $home
+source $home/bin/activate
+pip install -r $home/requirements.txt
+python $home/sddni.py
+
