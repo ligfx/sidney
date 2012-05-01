@@ -23,7 +23,7 @@ def cell_to_string(cell):
 		return str(int(cell.value))
 	else:
 		return str(cell.value)
-data = { key: [cell_to_string(cell) for cell in sheet.col(val)[3:]] for key, val in column_names.iteritems() }
+data = dict((key, [cell_to_string(cell) for cell in sheet.col(val)[3:]]) for key, val in column_names.iteritems())
 
 building_names = [
 	["WIG", "Wig"],
@@ -75,7 +75,7 @@ class PersonRepository:
 				).fetchall()
 			)
 	def tuple_to_dict(self, tuple):
-		return { key: value for key, value in zip(self.fields, tuple) }
+		return dict((key, value) for (key, value) in zip(self.fields, tuple))
 
 class BuildingAliasRepository:
 	fields = ["id", "building_id", "alias"]
@@ -92,7 +92,7 @@ class BuildingAliasRepository:
 			).fetchall()
 		)
 	def tuple_to_dict(self, tuple):
-		return { key: value for key, value in zip(self.fields, tuple) }
+		return dict((key, value) for key, value in zip(self.fields, tuple))
 
 class Person:
 	def __init__(self, opts={}):
